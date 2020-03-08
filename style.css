@@ -1,0 +1,184 @@
+/*GENERAL*/
+/* borders & paddings font partie de la taille d'un élément */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Mise en place des polices */
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #000;
+    margin: 0 0 7.1rem 0;
+}
+
+/*MISE EN PLACE DU RESPONSIVE*/
+
+/*Mise en place des conteneurs responsives par défaut*/
+.container{
+	max-width: 1200px;
+	margin: auto;
+}
+
+.small-container{
+	max-width: 960px;
+	margin: auto;
+}
+
+/* images responsives par défaut */
+img {
+    max-width: 100%;
+    max-height: auto;
+    display: block; /*pour empêcher la marge inférieure de 4px sous l'image des items de menus*/
+    
+    
+}
+
+/*LAYOUT*/
+header{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.menus_items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2.4rem 0 0 0;
+}
+
+.menu{
+    margin: 2.3rem;
+    flex: 0 0 calc(50% - 4.6rem);
+}
+
+
+
+.next{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;  
+}
+
+/*BACKGROUNDS*/
+
+.bg_header, .bg_footer, .bg_btn{
+    background-color:#569C87;
+}
+
+
+/*COMPOSANTS*/
+    /*LOGO*/
+    .logo{
+        width: 25%;
+        padding: 1.5rem;
+    }
+
+    /*MENU ITEM*/
+    .menu_zoom{
+        overflow:hidden;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    /*animation au survol des images des 4 menus cards*/
+
+    .menu__image{
+        transform: scale(1);
+        transition: transform 1000ms ease-in-out;
+    }
+
+
+    .menu__image:hover{
+        transform: scale(1.2);
+    }
+
+    /*BTN*/
+    .btn{
+        font-size: 1.5rem;
+        color: #FCCA46;
+        padding: 0.6rem 2rem;
+        border-radius: 1rem;
+        cursor: pointer;
+    }
+
+    /*animation des points sur le bouton*/
+    .point1, .point2, .point3{
+        display: inline-block;
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 0.8rem;
+        background-color:#FCCA46;
+        margin: 1.5rem 0.3rem;
+        opacity: 0;
+          
+    }
+
+
+
+    @keyframes dots{
+        0%{
+          opacity: 0.2;
+        }
+        
+        25%{
+          opacity: 1;
+        }
+        
+        100%{
+          opacity: 0.2;
+        }  
+      }
+
+      /*.next__btn:hover + */.dots span{
+        animation: dots 1600ms ease-in-out infinite;
+      }
+
+      /*.next__btn:hover +*/ .dots .point1{
+        animation-delay: 0ms; 
+      }
+      
+      /*.next__btn:hover + */.dots .point2{
+        animation-delay: 260ms;
+      }
+      
+      /*.next__btn:hover +*/ .dots .point3{
+        animation-delay: 520ms;
+      }
+
+
+    /*FOOTER*/
+
+    /*animation au survol des liens du footer*/
+    @keyframes shake {
+        25%{
+          transform: translateX(-1%);
+        }
+        75%{
+          transform: translateX(1%);
+        }     
+    }
+
+    .nav__lien:hover{
+        animation: shake 200ms ease-in-out infinite;
+    }
+
+
+
+/*RESPONSIVE*/
