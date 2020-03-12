@@ -182,6 +182,24 @@ footer{
       color: #FCCA46;
       }
 
+      /*PAGES MENUS*/
+	    /*TITRE MENU*/
+    .small_container h1, .small_container img{
+      text-align: center;
+      }
+      /*TABLE MENUS*/
+    table{
+    width: 100%;
+    }
+    
+    table td:nth-child(1){
+    width: 75%;
+    }
+    
+    table td:nth-child(2){
+    width: 25%;
+    }
+  
 
 
 /*RESPONSIVE*/
