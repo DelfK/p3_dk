@@ -19,6 +19,13 @@ body{
   font-size: 1.4rem;
 }
 
+.font_menu{
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 1.4rem;
+
+}
+
+
 /*MISE EN PLACE DU RESPONSIVE*/
 
 /*Mise en place des conteneurs responsives par défaut*/
@@ -85,7 +92,6 @@ footer{
 }
 
 /*BACKGROUNDS*/
-
 .bg_header, .bg_footer, .bg_btn{
     background-color:#569C87;
 }
@@ -109,6 +115,27 @@ footer{
 .bg_menu--palette{
   background-color: #FDFFFD;
 }
+
+
+.txt_gradient_chic{
+  background-image: linear-gradient(to right, #C77412 20%, #8F59FF);
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.txt_gradient_delice{
+  background-image: linear-gradient(to right, #0B29DC, #44A3FC);
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.txt_gradient_palette{
+  background-image: linear-gradient(to right, #3E913A, #BEFF7F);
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
 
 
 /*COMPOSANTS*/
@@ -208,6 +235,8 @@ footer{
       color: #FCCA46;
       }
 
+
+
       /*PAGES MENUS*/
 	    /*TITRE MENU*/
     .small_container h1 {
@@ -219,16 +248,24 @@ footer{
       /*TABLE MENUS*/
 
     .contenu_menu{
-      padding: 2.4rem;
+      padding: 5.8rem 2.4rem;
+      text-align: center;
     }
 
     .contenu_menu h1{
       padding: 3.6rem 6rem 6rem 6rem;
     }
 
+    .contenu_menu h2{
+      font-family: 'Crimson Text', serif;
+      font-size: 3.4rem;
+      padding: 1rem 0 5.8rem 0;
+    }
+
     table{
     width: 100%;
     padding: 4.8rem;
+    text-align: left;
     }
 
     table td{
@@ -243,6 +280,33 @@ footer{
     width: 15%;
     text-align: right;
     }
+
+    .fas{
+      font-size: 5rem;
+      color: #F15F62;
+    }
+
+    .fas-small, h3{
+      font-size: 2.6rem;
+      display: inline-block;
+      font-family: 'Crimson Text', serif;
+    }
+
+    .menu_chic .entree{
+      color: #C77412;
+    }
+
+    .menu_chic .plat{
+      color: #AD6BAC;
+    }
+
+    .menu_chic .dessert{
+      color: #4f00f2;
+    }
+
+    
+
+  
   
 
 
