@@ -24,15 +24,16 @@ body{
 
 .small-container{
 	max-width: 960px;
-	margin: auto;
+  margin: auto;
+  padding: 2.4rem 0 0 0;
 }
 
 /* images responsives par défaut */
 img {
     max-width: 100%;
-    max-height: auto;
+    height: auto;
     display: block; /*pour empêcher la marge inférieure de 4px sous l'image des items de menus*/
-    
+    border: none;
     
 }
 
@@ -47,7 +48,7 @@ header{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 2.4rem 0 0 0;
+    
 }
 
 .menu{
@@ -118,7 +119,7 @@ footer{
         cursor: pointer;
     }
 
-    /*animation des points sur le bouton*/
+    /*animation des points sous le bouton*/
     .point1, .point2, .point3{
         display: inline-block;
         width: 0.8rem;
@@ -129,8 +130,6 @@ footer{
         opacity: 0;
           
     }
-
-
 
     @keyframes dots{
         0%{
@@ -178,6 +177,10 @@ footer{
     .nav__lien:hover{
         animation: shake 200ms ease-in-out infinite;
     }
+    .nav__lien a{
+      text-decoration: none;
+      color: #FCCA46;
+      }
 
 
 
