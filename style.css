@@ -31,7 +31,7 @@ body{
 .small_container{
 	max-width: 960px;
   margin: auto;
-  padding: 2.4rem 0 0 0;
+  
 }
 
 /* images responsives par défaut */
@@ -210,8 +210,9 @@ footer{
 
       /*PAGES MENUS*/
 	    /*TITRE MENU*/
-    .small_container h1, .small_container img{
+    .small_container h1 {
       text-align: center;
+      padding: 2.8rem;
       }
     
     
@@ -221,13 +222,17 @@ footer{
       padding: 2.4rem;
     }
 
+    .contenu_menu h1{
+      padding: 3.6rem 6rem 6rem 6rem;
+    }
+
     table{
     width: 100%;
     padding: 4.8rem;
     }
 
     table td{
-      padding: 1rem 0;
+      padding: 0.8rem 0;
     }
     
     table td:nth-child(1){
