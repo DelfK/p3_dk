@@ -1,7 +1,7 @@
 /*GENERAL*/
-/* borders & paddings font partie de la taille d'un élément */
+
 * {
-    box-sizing: border-box;
+    box-sizing: border-box;/* borders & paddings font partie de la taille d'un élément */
     padding: 0;
     margin: 0;
 }
@@ -11,7 +11,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: #000;
-    margin: 0 0 7.1rem 0;
+    margin: 0 0 7.1rem 0; /*pour pas que le footer fixe en bas ne masque des éléments*/
 }
 
 .font_chic{
@@ -46,7 +46,6 @@ img {
     max-width: 100%;
     height: auto;
     display: block; /*pour empêcher la marge inférieure de 4px sous l'image des items de menus*/
-    border: none;
     
 }
 
@@ -92,7 +91,7 @@ footer{
 }
 
 /*BACKGROUNDS*/
-.bg_header, .bg_footer, .bg_btn{
+.bg_header, .bg_footer, .btn_bg{
     background-color:#569C87;
 }
 
@@ -139,175 +138,215 @@ footer{
 
 
 /*COMPOSANTS*/
-    /*LOGO*/
-    .logo{
-        width: 25%;
-        padding: 1.5rem;
-    }
+/*LOGO*/
+.logo{
+    width: 25%;
+    padding: 1.5rem;
+}
 
-    /*MENU ITEM*/
-    .menu_zoom{
-        overflow:hidden;
-        
-    }
+/*MENU ITEM*/
+.menu_zoom{
+    overflow:hidden;
     
-    /*animation au survol des images des 4 menus cards*/
+}
 
-    .menu__image{
-        transform: scale(1);
-        transition: transform 1000ms ease-in-out;
-    }
+/*animation au survol des images des 4 menus cards*/
+
+.menu__image{
+    transform: scale(1);
+    transition: transform 1000ms ease-in-out;
+}
 
 
-    .menu__image:hover{
-        transform: scale(1.2);
-    }
+.menu__image:hover{
+    transform: scale(1.2);
+}
 
-    /*BTN*/
-    .btn{
-        font-size: 1.5rem;
-        color: #FCCA46;
-        padding: 0.6rem 2rem;
-        border-radius: 1rem;
-        cursor: pointer;
-    }
+/*BTN*/
+.btn{
+    font-size: 1.5rem;
+    color: #FCCA46;
+    padding: 0.6rem 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
 
-    /*animation des points sous le bouton*/
-    .point1, .point2, .point3{
-        display: inline-block;
-        width: 0.8rem;
-        height: 0.8rem;
-        border-radius: 0.8rem;
-        background-color:#FCCA46;
-        margin: 1.5rem 0.3rem;
-        opacity: 0;
-          
-    }
-
-    @keyframes dots{
-        0%{
-          opacity: 0.2;
-        }
-        
-        25%{
-          opacity: 1;
-        }
-        
-        100%{
-          opacity: 0.2;
-        }  
-      }
-
-      /*.next__btn:hover + */.dots span{
-        animation: dots 1600ms ease-in-out infinite;
-      }
-
-      /*.next__btn:hover +*/ .dots .point1{
-        animation-delay: 0ms; 
-      }
+/*animation des points sous le bouton*/
+.point1, .point2, .point3{
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 0.8rem;
+    background-color:#FCCA46;
+    margin: 1.5rem 0.3rem;
+    opacity: 0;
       
-      /*.next__btn:hover + */.dots .point2{
-        animation-delay: 260ms;
-      }
-      
-      /*.next__btn:hover +*/ .dots .point3{
-        animation-delay: 520ms;
-      }
+}
 
-
-    /*FOOTER*/
-
-    /*animation au survol des liens du footer*/
-    @keyframes shake {
-        25%{
-          transform: translateX(-1%);
-        }
-        75%{
-          transform: translateX(1%);
-        }     
-    }
-
-    .nav__lien:hover{
-        animation: shake 200ms ease-in-out infinite;
-    }
-    .nav__lien a{
-      text-decoration: none;
-      color: #FCCA46;
-      }
-
-
-
-      /*PAGES MENUS*/
-	    /*TITRE MENU*/
-    .small_container h1 {
-      text-align: center;
-      padding: 2.8rem;
-      }
-    
-    
-      /*TABLE MENUS*/
-
-    .contenu_menu{
-      padding: 5.8rem 2.4rem;
-      text-align: center;
-    }
-
-    .contenu_menu h1{
-      padding: 3.6rem 6rem 6rem 6rem;
-    }
-
-    .contenu_menu h2{
-      font-family: 'Crimson Text', serif;
-      font-size: 3.4rem;
-      padding: 1rem 0 5.8rem 0;
-    }
-
-    table{
-    width: 100%;
-    padding: 4.8rem;
-    text-align: left;
-    }
-
-    table td{
-      padding: 0.8rem 0;
-    }
-    
-    table td:nth-child(1){
-    width: 85%;
-    }
-    
-    table td:nth-child(2){
-    width: 15%;
-    text-align: right;
-    }
-
-    .fas{
-      font-size: 5rem;
-      color: #F15F62;
-    }
-
-    .fas-small, h3{
-      font-size: 2.6rem;
-      display: inline-block;
-      font-family: 'Crimson Text', serif;
-    }
-
-    .menu_chic .entree{
-      color: #C77412;
-    }
-
-    .menu_chic .plat{
-      color: #AD6BAC;
-    }
-
-    .menu_chic .dessert{
-      color: #4f00f2;
-    }
-
-    
-
+@keyframes dots{
+  0%{
+    opacity: 0.2;
+  }
   
+  25%{
+    opacity: 1;
+  }
   
+  100%{
+    opacity: 0.2;
+  }  
+}
 
+.dots span{
+  animation: dots 1600ms ease-in-out infinite;
+}
+
+.dots .point1{
+  animation-delay: 0ms; 
+}
+
+.dots .point2{
+  animation-delay: 260ms;
+}
+
+.dots .point3{
+  animation-delay: 520ms;
+}
+
+
+/*FOOTER*/
+
+/*animation au survol des liens du footer*/
+@keyframes shake {
+    25%{
+      transform: translateX(-1%);
+    }
+    75%{
+      transform: translateX(1%);
+    }     
+}
+
+.nav__lien a{
+  text-decoration: none;
+  color: #FCCA46;
+  }
+
+.nav__lien:hover{
+    animation: shake 200ms ease-in-out infinite;
+}
+
+
+
+/*PAGES MENUS*/
+
+  /*TITRE MENU*/
+
+.small_container h1 {
+text-align: center;
+padding: 2.8rem;
+}
+    
+    
+  /*TABLE MENUS*/
+
+.contenu_menu{
+  padding: 5.8rem 2.4rem;
+  text-align: center;
+}
+
+.contenu_menu h1{
+  padding: 3.6rem 6rem 6rem 6rem;
+}
+
+.contenu_menu h2{
+  font-size: 3.4rem;
+  padding: 1rem 0 5.8rem 0;
+}
+
+.menu_note .contenu_menu h2{
+  font-family: 'Marck Script', cursive;
+}
+
+.menu_delice .contenu_menu h2{
+  font-family: 'Marck Script', cursive;
+}
+
+table{
+  width: 100%;
+  padding: 4.8rem;
+  text-align: left;
+}
+
+table td{
+  padding: 0.8rem 0;
+}
+
+table td:nth-child(1){
+  width: 85%;
+}
+
+table td:nth-child(2){
+  width: 15%;
+  text-align: right;
+}
+
+.fas{
+  font-size: 5rem;
+  color: #F15F62;
+  background: -webkit-linear-gradient(#F16263, #F6906A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fas-small, h3{
+  font-size: 2.6rem;
+  display: inline-block;
+  font-family: 'Marck Script', cursive;
+}
+
+.menu_chic .entree{
+  color: #C77412;
+}
+
+.menu_chic .plat{
+  color: #AD6BAC;
+}
+
+.menu_chic .dessert{
+  color: #4f00f2;
+}
+
+hr{
+  border: none;
+  outline: none;
+}
+
+.menu_note .contenu_menu hr{
+  background: #000000;
+  height: 0.1rem;
+  overflow: visible;
+  
+}
+
+.menu_note .contenu_menu hr::after{
+  position: relative;
+  top: -1rem;
+  padding: 1rem;
+}
+
+.menu_note .contenu_menu .entree hr::after{
+  content:"Prélude";
+  background:#FCDFDB;    
+}
+
+.menu_note .contenu_menu .plat hr::after{
+  content:"Point d'orgue";
+  background:#FCDFDB;    
+}
+
+.menu_note .contenu_menu .dessert hr::after{
+  content:"Mouvement final";
+  background:#FCDFDB;    
+}  
 
 /*RESPONSIVE*/
