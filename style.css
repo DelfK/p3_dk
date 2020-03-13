@@ -11,7 +11,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: #000;
-    margin: 0 0 7.1rem 0; /*pour pas que le footer fixe en bas ne masque des éléments*/
+    margin: 0 0 7.1rem 0; /*pour pas que le footer fixé en bas ne masque des éléments dans le flow de la page*/
 }
 
 .font_chic{
@@ -56,6 +56,7 @@ header{
     
 }
 
+/* grille de la page d'accueil*/
 .menus_items{
     display: flex;
     flex-direction: row;
@@ -68,15 +69,14 @@ header{
     flex: 0 0 calc(50% - 4.6rem);
 }
 
-
-
+/* Section prochainement*/
 .next{
     display: flex;
     flex-direction: column;
     align-items: center;
     
 }
-
+ /*footer et nav*/
 footer{
     position: fixed;
     bottom: 0;
@@ -91,6 +91,8 @@ footer{
 }
 
 /*BACKGROUNDS*/
+
+
 .bg_header, .bg_footer, .btn_bg{
     background-color:#569C87;
 }
@@ -115,7 +117,6 @@ footer{
   background-color: #FDFFFD;
 }
 
-
 .txt_gradient_chic{
   background-image: linear-gradient(to right, #C77412 20%, #8F59FF);
   -webkit-background-clip: text;
@@ -135,8 +136,6 @@ footer{
 }
 
 
-
-
 /*COMPOSANTS*/
 /*LOGO*/
 .logo{
@@ -146,7 +145,7 @@ footer{
 
 /*MENU ITEM*/
 .menu_zoom{
-    overflow:hidden;
+    overflow:hidden; /*on contraint l'image dans la div pour que seule l'image grossisse et pas la div*/
     
 }
 
@@ -156,7 +155,6 @@ footer{
     transform: scale(1);
     transition: transform 1000ms ease-in-out;
 }
-
 
 .menu__image:hover{
     transform: scale(1.2);
@@ -168,21 +166,10 @@ footer{
     color: #FCCA46;
     padding: 0.6rem 2rem;
     border-radius: 1rem;
-    cursor: pointer;
+    cursor:pointer;
 }
 
 /*animation des points sous le bouton*/
-.point1, .point2, .point3{
-    display: inline-block;
-    width: 0.8rem;
-    height: 0.8rem;
-    border-radius: 0.8rem;
-    background-color:#FCCA46;
-    margin: 1.5rem 0.3rem;
-    opacity: 0;
-      
-}
-
 @keyframes dots{
   0%{
     opacity: 0.2;
@@ -198,7 +185,15 @@ footer{
 }
 
 .dots span{
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 0.8rem;
+  background-color:#FCCA46;
+  margin: 1.5rem 0.3rem;
+  opacity: 0;
   animation: dots 1600ms ease-in-out infinite;
+    
 }
 
 .dots .point1{
@@ -216,7 +211,7 @@ footer{
 
 /*FOOTER*/
 
-/*animation au survol des liens du footer*/
+/*animation wiggle au survol des liens du footer*/
 @keyframes shake {
     25%{
       transform: translateX(-1%);
@@ -235,11 +230,9 @@ footer{
     animation: shake 200ms ease-in-out infinite;
 }
 
-
-
 /*PAGES MENUS*/
 
-  /*TITRE MENU*/
+  /*TITRE PRINCIPAL*/
 
 .small_container h1 {
 text-align: center;
@@ -247,7 +240,7 @@ padding: 2.8rem;
 }
     
     
-  /*TABLE MENUS*/
+  /*SOUS-TITRES*/
 
 .contenu_menu{
   padding: 5.8rem 2.4rem;
@@ -263,14 +256,11 @@ padding: 2.8rem;
   padding: 1rem 0 5.8rem 0;
 }
 
-.menu_note .contenu_menu h2{
+.menu_note .contenu_menu h2, .menu_delice .contenu_menu h2{
   font-family: 'Marck Script', cursive;
 }
 
-.menu_delice .contenu_menu h2{
-  font-family: 'Marck Script', cursive;
-}
-
+/*Layout général des pages de menus*/
 table{
   width: 100%;
   padding: 4.8rem;
@@ -290,6 +280,7 @@ table td:nth-child(2){
   text-align: right;
 }
 
+/*Les icônes note de musique de la page La note enchantée*/
 .fas{
   font-size: 5rem;
   color: #F15F62;
@@ -304,6 +295,8 @@ table td:nth-child(2){
   font-family: 'Marck Script', cursive;
 }
 
+
+/*Couleurs du texte du menu le Chic à la française*/
 .menu_chic .entree{
   color: #C77412;
 }
@@ -316,37 +309,78 @@ table td:nth-child(2){
   color: #4f00f2;
 }
 
-hr{
-  border: none;
-  outline: none;
+.categorie_menu{
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
-.menu_note .contenu_menu hr{
-  background: #000000;
-  height: 0.1rem;
-  overflow: visible;
-  
+.menu_note .categorie_menu{
+  background: url(img/note_barre_gauche.png) no-repeat left, url(img/note_barre_droite.png) no-repeat right;  
 }
 
-.menu_note .contenu_menu hr::after{
-  position: relative;
-  top: -1rem;
-  padding: 1rem;
+.menu_chic .entree .categorie_menu{
+  background: url(img/chic_entree_barre_gauche.png) no-repeat left, url(img/chic_entree_barre_droite.png) no-repeat right;
+  background-size: 30%;
 }
 
-.menu_note .contenu_menu .entree hr::after{
-  content:"Prélude";
-  background:#FCDFDB;    
+.menu_chic .plat .categorie_menu{
+  background: url(img/chic_plat_barre_gauche.png) no-repeat left, url(img/chic_plat_barre_droite.png) no-repeat right;
+  background-size: 30%;
 }
 
-.menu_note .contenu_menu .plat hr::after{
-  content:"Point d'orgue";
-  background:#FCDFDB;    
+.menu_chic .dessert .categorie_menu{
+  background: url(img/chic_dessert_barre_gauche\ 2.png) no-repeat left, url(img/chic_dessert_barre_droite.png) no-repeat right;
+  background-size: 30%;
 }
 
-.menu_note .contenu_menu .dessert hr::after{
-  content:"Mouvement final";
-  background:#FCDFDB;    
-}  
+.menu_delice .categorie_menu{
+  background: url(img/menu_delice_barre_gauche.png) no-repeat left, url(img/menu_delice_barre_droite.png) no-repeat right;
+  background-size: 30%;
+}
+
+.menu_palette .categorie_menu{
+  background: url(img/palette_barre_gauche.png) no-repeat left, url(img/palette_barre_droite.png) no-repeat right;
+  background-size: 30%;
+}
+
+
+
+.categorie_menu p{
+width: fit-content;
+margin: auto;
+}
+
+/*animation sur les titres des menus*/
+
+.categorie_menu p::after{
+  content:"";
+  display: block;
+  border: 0.1rem solid #000;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform 500ms ease-in-out;
+}
+
+.menu_chic .entree .categorie_menu p::after{
+  border: 0.1rem solid #C77412;
+}
+
+.menu_chic .plat .categorie_menu p::after{
+  border: 0.1rem solid #AD6BAC;
+}
+
+.menu_chic .dessert .categorie_menu p::after{
+  border: 0.1rem solid #4f00f2;
+}
+
+.categorie_menu p:hover::after{
+  transform: scale(1, 1);
+}
+
+ 
+
+
+
 
 /*RESPONSIVE*/
