@@ -391,26 +391,34 @@ margin: auto;
 /*RESPONSIVE*/
 
 @media (max-width: 768px){
+  .container{
+    padding: 0;
+  }
   .container-small{
     padding: 1rem;
     
   }
 
-  .btn{
-    font-size: 1.2rem; 
+  .container-small h1 {
+    padding: 1.4rem;
+}
+
+  .logo{
+    min-width: 40%;
   }
 
-  .contenu_menu h2{
+  .contenu_menu {
+    padding: 2.8rem;
+  }
+
+  .contenu_menu h2 {
     font-size: 3rem;
-  }
-
-  .categorie_menu{
-    font-size: 1.6rem; 
+    padding: 1rem 0 2rem 0;
   }
 
 
   table{
-    padding: 2.8rem;
+    padding: 1.8rem;
   }
 
   .fas{
@@ -431,6 +439,22 @@ margin: auto;
 }
 
 @media (max-width: 576px) {
+  .contenu_menu {
+    padding: 1.8rem 0.8rem;
+  }
+
+  .contenu_menu h2 {
+    font-size: 2.2rem;
+  }
+
+  .categorie_menu {
+    font-size: 1.3rem;
+  }
+
+  .menu_chic .categorie_menu {
+    padding: 0 5rem;
+  }
+
   .menus-grid{
     flex-direction: column;
   }
@@ -443,14 +467,25 @@ margin: auto;
     padding: 0.1rem;
   }
 
+  .fas{
+    font-size: 3rem;
+  }
+
+  .fas-small, h3{
+    font-size: 2rem;
+  }
+
+  .font_menu, .font_chic {
+    font-size: 1.1rem;
+  }
+
   .btn{
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
   }
 
-  .contenu_menu{
-    padding: 2.8rem 2.4rem;
-  }
+
+
 
 
   
