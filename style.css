@@ -35,9 +35,10 @@ body{
   padding: 2.4rem 0 0 0;
 }
 
-.small_container{
+.container-small{
 	max-width: 960px;
   margin: auto;
+  padding: 0;
   
 }
 
@@ -57,7 +58,7 @@ header{
 }
 
 /* grille de la page d'accueil*/
-.menus_items{
+.menus-grid{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -93,7 +94,7 @@ footer{
 /*BACKGROUNDS*/
 
 
-.bg_header, .bg_footer, .btn_bg{
+.header--green, .footer--green, .btn--green{
     background-color:#569C87;
 }
 
@@ -144,7 +145,7 @@ footer{
 }
 
 /*MENU ITEM*/
-.menu_zoom{
+.menu--zoom{
     overflow:hidden; /*on contraint l'image dans la div pour que seule l'image grossisse et pas la div*/
     
 }
@@ -184,7 +185,7 @@ footer{
   }  
 }
 
-.dots span{
+.next__dots span{
   display: inline-block;
   width: 0.8rem;
   height: 0.8rem;
@@ -196,15 +197,15 @@ footer{
     
 }
 
-.dots .point1{
+.next__dots .point1{
   animation-delay: 0ms; 
 }
 
-.dots .point2{
+.next__dots .point2{
   animation-delay: 260ms;
 }
 
-.dots .point3{
+.next__dots .point3{
   animation-delay: 520ms;
 }
 
@@ -234,7 +235,7 @@ footer{
 
   /*TITRE PRINCIPAL*/
 
-.small_container h1 {
+.container-small h1 {
 text-align: center;
 padding: 2.8rem;
 }
@@ -315,33 +316,35 @@ table td:nth-child(2){
   font-size: 2rem;
 }
 
+
+/* Les décorations des titres des catégories de chaqsue menu*/
 .menu_note .categorie_menu{
   background: url(img/note_barre_gauche.png) no-repeat left, url(img/note_barre_droite.png) no-repeat right;  
 }
 
 .menu_chic .entree .categorie_menu{
   background: url(img/chic_entree_barre_gauche.png) no-repeat left, url(img/chic_entree_barre_droite.png) no-repeat right;
-  background-size: 30%;
+  background-size: 25%;
 }
 
 .menu_chic .plat .categorie_menu{
   background: url(img/chic_plat_barre_gauche.png) no-repeat left, url(img/chic_plat_barre_droite.png) no-repeat right;
-  background-size: 30%;
+  background-size: 25%;
 }
 
 .menu_chic .dessert .categorie_menu{
   background: url(img/chic_dessert_barre_gauche\ 2.png) no-repeat left, url(img/chic_dessert_barre_droite.png) no-repeat right;
-  background-size: 30%;
+  background-size: 25%;
 }
 
 .menu_delice .categorie_menu{
   background: url(img/menu_delice_barre_gauche.png) no-repeat left, url(img/menu_delice_barre_droite.png) no-repeat right;
-  background-size: 30%;
+  background-size: 25%;
 }
 
 .menu_palette .categorie_menu{
   background: url(img/palette_barre_gauche.png) no-repeat left, url(img/palette_barre_droite.png) no-repeat right;
-  background-size: 30%;
+  background-size: 25%;
 }
 
 
@@ -375,7 +378,7 @@ margin: auto;
 }
 
 .categorie_menu p:hover::after{
-  transform: scale(1, 1);
+  transform: scale(1, 1);  
 }
 
  
@@ -384,3 +387,69 @@ margin: auto;
 
 
 /*RESPONSIVE*/
+
+@media (max-width: 768px){
+  .container-small{
+    padding: 1rem;
+    
+  }
+
+  .btn{
+    font-size: 1.2rem; 
+  }
+
+  .contenu_menu h2{
+    font-size: 3rem;
+  }
+
+  .categorie_menu{
+    font-size: 1.6rem; 
+  }
+
+
+  table{
+    padding: 2.8rem;
+  }
+
+  .fas{
+    font-size: 4rem;
+  }
+
+  .fas-small, h3{
+    font-size: 2.2rem;
+  }
+
+
+  .menu_note .categorie_menu,
+  .menu_chic .categorie_menu,
+  .menu_delice .categorie_menu,
+  .menu_palette .categorie_menu {
+    background-size: 20%;
+  }
+}
+
+@media (max-width: 576px) {
+  .menus-grid{
+    flex-direction: column;
+  }
+
+  .menu{
+    margin: 1rem;
+  }
+
+  .nav{
+    padding: 0.1rem;
+  }
+
+  .btn{
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .contenu_menu{
+    padding: 2.8rem 2.4rem;
+  }
+
+
+  
+}
