@@ -146,7 +146,7 @@ footer{
 
 /*MENU ITEM*/
 .menu--zoom{
-    overflow:hidden; /*on contraint l'image dans la div pour que seule l'image grossisse et pas la div*/
+    overflow:hidden; /*on contraint l'image dans la div pour que le cadre ne grossisse pas*/
     
 }
 
@@ -154,11 +154,13 @@ footer{
 
 .menu__image{
     transform: scale(1);
-    transition: transform 1000ms ease-in-out;
+    opacity: 1;
+    transition: all 1000ms ease-in-out;
 }
 
 .menu__image:hover{
     transform: scale(1.2);
+    opacity: 0.6;
 }
 
 /*BTN*/
