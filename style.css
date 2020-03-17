@@ -352,7 +352,7 @@ table td:nth-child(2){
 
 
 .categorie_menu p{
-width: fit-content;
+display: inline-block;
 margin: auto;
 }
 
