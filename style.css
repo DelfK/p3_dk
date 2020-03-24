@@ -67,7 +67,7 @@ header{
 
 .menu{
     margin: 2.3rem;
-    flex: 0 0 calc(50% - 4.6rem);
+    flex-basis: calc(50% - 4.6rem);
 }
 
 /* Section prochainement*/
@@ -119,9 +119,10 @@ footer{
 }
 
 .txt_gradient_chic{
+  background-color: #C77412;
   background-image: linear-gradient(to right, #C77412 20%, #8F59FF);
   -webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; 
 }
 
 .txt_gradient_delice{
@@ -135,7 +136,6 @@ footer{
   -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-
 
 /*COMPOSANTS*/
 /*LOGO*/
@@ -348,8 +348,6 @@ table td:nth-child(2){
   background: url(img/palette_barre_gauche.png) no-repeat left, url(img/palette_barre_droite.png) no-repeat right;
   background-size: 25%;
 }
-
-
 
 .categorie_menu p{
 display: inline-block;
